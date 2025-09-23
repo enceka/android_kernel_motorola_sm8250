@@ -3945,7 +3945,7 @@ static const struct spi_device_id mcp25xxfd_id_table[] = {
 };
 MODULE_DEVICE_TABLE(spi, mcp25xxfd_id_table);
 
-static int mcp25xxfd_dump_regs(struct seq_file *file, void *offset)
+__maybe_unused int mcp25xxfd_dump_regs(struct seq_file *file, void *offset)
 {
 	struct spi_device *spi = file->private;
 	struct mcp25xxfd_priv *priv = spi_get_drvdata(spi);
